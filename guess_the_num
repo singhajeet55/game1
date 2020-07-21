@@ -1,0 +1,31 @@
+import random
+top_value=int(input("enter the top value for the range :"))
+
+
+for i in range(1,top_value):
+    y=random.randrange(int(1),int(top_value),int(4))
+    num=int(input("guess the random number within the range :"))
+    lst = [] 
+    while num > 0:
+      
+        if(num > y):
+        
+           num=int(input("enter the lower number :"))
+           lst.append(num) # adding the element 
+
+        if(num < y):      
+           num=int(input("enter the higher number :"))  
+           lst.append(num) # adding the element 
+
+        if(num==y):
+           s=len(lst+[1])
+           print("your have total",s,"guess")
+
+           if s > 5:
+               print("your guessing power is low")
+
+           else:
+               print("amazing work your guessing power is good")
+           
+          
+           break
